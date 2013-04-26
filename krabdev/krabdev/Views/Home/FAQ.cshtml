@@ -1,0 +1,21 @@
+﻿@model IEnumerable<krabdev.Models.FAQ>
+
+@{
+    ViewBag.Title = "FAQ";
+}
+
+
+
+<!-- LIST OF FAQs -->
+<ul class="accordion" data-role="accordion">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="#">@item.Question</a>
+            <div>
+                @item.Anwser
+                @Html.ActionLink("Edit", "Edit", new { id=item.FAQId })
+            </div>
+        </li>
+    }
+</ul>

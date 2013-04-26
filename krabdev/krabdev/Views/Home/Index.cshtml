@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!-- 2nd nav bar -->
+<div class="grid">
+    <div class="row">
+        <div id="header-main" class="spanN">
+            <div class="nav2-left">
+            </div>
+            <div class="nav2-center">
+            </div>
+            <div class="nav2-right">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page secondary">
+    <div class="grid">
+        <div class="row">
+
+            <div class="span8">
+                <!-- CARUSEL -->
+
+                <div class="carousel span5" style="height: 400px; width: 400px;" data-role="carousel"
+                    data-param-effect="slide" data-param-direction="left"
+                    data-param-duration="2000" data-param-period="4000">
+                    <div class="slides">
+                        <div class="slide image" id="slide1">
+                            <img src="~/Content/Images/img1.bmp" />
+                            <div class="description">
+                                Description text here...
+                            </div>
+                        </div>
+
+                        <div class="slide mixed" id="slide2">
+                            <img src="~/Content/Images/img2.bmp" />
+                            <div class="description">
+                                Description text here...
+                            </div>
+                        </div>
+
+                        <div class="slide mixed" id="slide3">
+                            <img src="~/Content/Images/img3.bmp" />
+                            <div class="description">
+                                Description text here...
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="control left">‹</span>
+                    <span class="control right">›</span>
+
+                </div>
+
+            </div>
+            <div class="span4">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="background-color: aqua; width: 100%;">
+    <div class="tile bg-color-red outline-color-green">
+        <h2>Hello</h2>
+    </div>
+    <div class="tile bg-color-orange">
+        <h1>Hello</h1>
+    </div>
+    <div class="tile bg-color-orange">
+        <h1>Hello</h1>
+    </div>
+</div>
+

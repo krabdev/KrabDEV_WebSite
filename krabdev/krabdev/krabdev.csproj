@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCFE765C-3364-4522-B3F7-46FAEF2D5A49}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>krabdev</RootNamespace>
+    <AssemblyName>krabdev</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304251604370_initial.cs" />
+    <Compile Include="Migrations\201304251604370_initial.Designer.cs">
+      <DependentUpon>201304251604370_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201304251614172_ConnSouAdded.cs" />
+    <Compile Include="Migrations\201304251614172_ConnSouAdded.Designer.cs">
+      <DependentUpon>201304251614172_ConnSouAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Context.cs" />
+    <Compile Include="Models\FAQ.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\img1.bmp" />
+    <Content Include="Content\Images\img2.bmp" />
+    <Content Include="Content\Images\img3.bmp" />
+    <Content Include="Content\Images\img4.bmp" />
+    <Content Include="Content\Images\Patterns\grey005.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\css\grey_wash_wall.png" />
+    <Content Include="Content\krabdev.css" />
+    <Content Include="Content\metro-boot\css\metro-bootstrap.css" />
+    <Content Include="Content\metro-boot\font\fontawesome-webfont.svg" />
+    <Content Include="Content\metro-boot\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\metro-boot\img\glyphicons-halflings.png" />
+    <Content Include="Content\metro-boot\js\bootstrap-alert.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-button.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-carousel.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-collapse.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-dropdown.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-modal.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-popover.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-scrollspy.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-tab.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-tooltip.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-transition.js" />
+    <Content Include="Content\metro-boot\js\bootstrap-typeahead.js" />
+    <Content Include="Content\metro-boot\js\font-awesome.css" />
+    <Content Include="Content\metro-boot\js\jquery-1.8.0.js" />
+    <Content Include="Content\metro-boot\js\jquery.unobtrusive-ajax.js" />
+    <Content Include="Content\metro-boot\js\jquery.validate.js" />
+    <Content Include="Content\metro-boot\js\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\metro-boot\js\metro-bootstrap\metro-docs.js" />
+    <Content Include="Content\metro-boot\js\talkslab.png" />
+    <Content Include="Content\metro-boot\js\twittertile.png" />
+    <Content Include="Content\Metro-UI-CSS-master\css\modern-responsive.css" />
+    <Content Include="Content\Metro-UI-CSS-master\css\modern.css" />
+    <Content Include="Content\Metro-UI-CSS-master\css\site.css" />
+    <Content Include="Content\Metro-UI-CSS-master\css\theme-dark.css" />
+    <Content Include="Content\Metro-UI-CSS-master\fonts\iconFont.svg" />
+    <Content Include="Content\Metro-UI-CSS-master\fonts\license.txt" />
+    <Content Include="Content\Metro-UI-CSS-master\images\preloader-w8-cycle-black.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\images\preloader-w8-cycle-white.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\images\preloader-w8-line-black.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\images\preloader-w8-line-white.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\accordion.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\buttonset.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\calendar.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\carousel.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\dialog.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\dropdown.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\input-control.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\pagecontrol.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\rating.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\slider.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\start-menu.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\tile-drag.js" />
+    <Content Include="Content\Metro-UI-CSS-master\javascript\tile-slider.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\css\modern-responsive.css" />
+    <Content Include="Content\Metro-UI-CSS-master\public\css\modern.css" />
+    <Content Include="Content\Metro-UI-CSS-master\public\css\site.css" />
+    <Content Include="Content\Metro-UI-CSS-master\public\css\theme-dark.css" />
+    <Content Include="Content\Metro-UI-CSS-master\public\fonts\iconFont.svg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\fonts\license.txt" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\1.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\1005-BizSpark-261x230.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\2.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\3.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\4.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\5.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\armor.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\author.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-activity.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-alert.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-attention.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-available.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-away.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-busy.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-error.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-newMessage.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-paused.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-playing.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\bage-unavailable.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Calendar128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Camera48.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\chrome.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\collapse24-black.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\collapse24.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\collapse32-black.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\collapse32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\download-32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\excel2013icon.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\expand24-black.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\expand24.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\expand32-black.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\expand32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\firefox.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\fork-32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\github.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\grid.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\icons-white.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\icons.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\ie.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\InternetExplorer128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\lock-open.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\lock.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\logo-jetbrains.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\logo32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Mail128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Market128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\michael.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Music128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\myface.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\onenote2013icon.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\opera.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Picture128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\preloader-w8-cycle-black.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\preloader-w8-cycle-white.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\preloader-w8-line-black.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\preloader-w8-line-white.gif" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\pull24-dark.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\pull24.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\responsive.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\row24.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Rss128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\shield-user.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\simple.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\spface.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\star32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\stock-up.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\svface.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\Video128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\view-32.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\windows-8-metro.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\windows8_metro_green_1920_1080.jpg" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\word2013icon.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images\YouTube128.png" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\github.info.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\google-analytics.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\jquery-1.8.2.min.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\jquery-1.9.0.min.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\jquery.mousewheel.min.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\moment.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\assets\moment_langs.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-apollo.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-clj.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-css.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-go.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-hs.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-lisp.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-lua.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-ml.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-n.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-proto.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-scala.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-sql.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-tex.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-vb.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-vhdl.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-wiki.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-xq.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\lang-yaml.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\prettify.css" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\google-code-prettify\prettify.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\accordion.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\buttonset.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\calendar.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\carousel.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\dialog.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\dropdown.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\input-control.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\pagecontrol.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\rating.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\slider.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\start-menu.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\tile-drag.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\modern\tile-slider.js" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\sharrre\jquery.sharrre-1.3.4.min.js" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\metro-boot\font\fontawesome-webfont.eot" />
+    <Content Include="Content\metro-boot\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\metro-boot\font\fontawesome-webfont.woff" />
+    <Content Include="Content\metro-boot\font\FontAwesome.otf" />
+    <Content Include="Content\Metro-UI-CSS-master\fonts\iconFont.eot" />
+    <Content Include="Content\Metro-UI-CSS-master\fonts\iconFont.ttf" />
+    <Content Include="Content\Metro-UI-CSS-master\fonts\iconFont.woff" />
+    <Content Include="Content\Metro-UI-CSS-master\less\accordion.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\bricks.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\buttons.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\calendar.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\cards.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\carousel.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\code.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\colors.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\dialog.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\forms.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\grid.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\hero.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\icons.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\images.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\layout.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\listview.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\menus.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern-responsive-max480.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern-responsive-max767.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern-responsive-max979.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern-responsive-min1200.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern-responsive.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\modern.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\notices.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\pagecontrol.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\progress.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\rating.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\reset.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\routines.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\sidebar.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\slider.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\tables.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\theme-dark.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\tiles.less" />
+    <Content Include="Content\Metro-UI-CSS-master\less\typography.less" />
+    <Content Include="Content\Metro-UI-CSS-master\public\.htaccess" />
+    <Content Include="Content\Metro-UI-CSS-master\public\accordion.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\adsense.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\buttons-set.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\buttons.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\calendar.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\cards.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\carousel.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\counter.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\dialog.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\fonts\iconFont.eot" />
+    <Content Include="Content\Metro-UI-CSS-master\public\fonts\iconFont.ttf" />
+    <Content Include="Content\Metro-UI-CSS-master\public\fonts\iconFont.woff" />
+    <Content Include="Content\Metro-UI-CSS-master\public\footer.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\forms.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\global.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\grid.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\header.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\icons.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\images.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\index.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\javascript.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\js\sharrre\sharrre.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\layout.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\listview.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\menus.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\navigation.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\notices.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\page-secondary.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\page.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\pagecontrol.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\progress.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\rating.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\responsive.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\sidebar.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\slider.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\sponsoring.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\tables.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\tiles.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\typography.php" />
+    <Content Include="Content\Metro-UI-CSS-master\public\version.phtml" />
+    <Content Include="Content\Metro-UI-CSS-master\public\windows8start.php" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout.basic.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Test\Details.cshtml" />
+    <Content Include="Views\Test\Create.cshtml" />
+    <Content Include="Views\Test\Edit.cshtml" />
+    <Content Include="Views\Test\Delete.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201304251604370_initial.resx">
+      <DependentUpon>201304251604370_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304251614172_ConnSouAdded.resx">
+      <DependentUpon>201304251614172_ConnSouAdded.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1526/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

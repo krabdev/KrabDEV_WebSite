@@ -1,0 +1,24 @@
+﻿#header-main {
+    width: 100%;
+    height: 150px;
+    background-image:url(~/Content/Metro-UI-Css-master/css/grey_wash_wall.png);
+    background-color:aqua;
+}
+
+.nav2-right {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.nav2-center {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.nav2-left {
+    width: 25%;
+    height: 100%;
+    float: left;
+}

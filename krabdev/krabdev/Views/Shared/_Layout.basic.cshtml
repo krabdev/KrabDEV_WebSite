@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Metro-UI-CSS-master/css/modern.css" rel="stylesheet" />
+    <link href="~/Content/Metro-UI-CSS-master/css/site.css" rel="stylesheet" />
+    <link href="~/Content/krabdev.css" rel="stylesheet" />
+    @*<link href="~/Content/Metro-UI-CSS-master/css/modern-responsive.css" rel="stylesheet" />
+    *@@Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body class="metrouicss">
+
+    <div class="nav-bar">
+        <div class="nav-bar-inner padding10" style="height: 50px">
+
+            <span class="element">Product Name</span>
+
+            <span class="divider"></span>
+
+            <ul class="menu">
+                <li><a href="@Url.Action("Index", "Home")"><i class="icon-home" style="font-size:20px"></i></a></li>
+                <li><a href="@Url.Action("FAQ", "Home")"><i class="icon-info" style="font-size:20px"></i></a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer>
+    </footer>
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Content/Metro-UI-CSS-master/javascript/accordion.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/buttonset.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/calendar.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/carousel.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/dialog.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/dropdown.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/input-control.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/pagecontrol.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/rating.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/slider.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/start-menu.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/tile-drag.js"></script>
+    <script src="~/Content/Metro-UI-CSS-master/javascript/tile-slider.js"></script>
+    @RenderSection("scripts", required: false)
+    
+</body>
+</html>
